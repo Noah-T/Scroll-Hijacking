@@ -1,0 +1,25 @@
+#yummyFood{
+	/*parent wrapper is always full screen*/
+	height: 100%;
+}
+
+.foodItem {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 0;
+	width: 100%;
+
+	-webkit-transition: height 0.9s ease-in-out;
+
+}
+
+.foodItem:nth-child(1) {z-index: 10;}
+.foodItem:nth-child(2) {z-index: 9;}
+.foodItem:nth-child(3) {z-index: 8;}
+
+.active.foodItem {
+	/* active item will get height of 100% */
+	height: 100%;
+}

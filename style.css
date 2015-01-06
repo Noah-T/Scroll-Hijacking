@@ -1,6 +1,6 @@
 body{
 	margin: 0;
-
+	height: 100%;
 }
 
 h1 {
@@ -19,11 +19,14 @@ h1 {
 }
 
 div {
-	height: 600px;
+	height: 100%;
 	font-size: 2em;
+	margin: 20px 0;
 }
 
-
+#firstDiv {
+	margin-top: 0;
+}
 
 div.paragraphWrapper {
 	opacity: 0.5;
@@ -31,16 +34,15 @@ div.paragraphWrapper {
 	background: gray;
 	border-radius: 20px;
 	max-width: 400px;
-	min-width: 300px;
-	float: right;
-	margin-right: 100px;
+	/*min-width: 300px;*/
+	max-height: 300px;
+
+	margin: 0 auto;
 }
 
 #firstDiv p.paragraphCopy {
 	opacity: 1.0;
 	font-size: 0.6em;
-
-
 } 
 
 .blueClass{
