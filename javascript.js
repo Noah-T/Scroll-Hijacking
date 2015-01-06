@@ -1,9 +1,43 @@
+currentDivIndex = 0;
 $(document).bind("mousewheel DOMMouseScroll", function(event){
 	// console.log("first function triggered'");
 	event.preventDefault();
 	console.log($(window).scrollTop());
-	$("#firstDiv").addClass("hideIt");
-	$("#secondDiv").addClass("stickToTheWindow");
+
+	switch(currentDivIndex){
+		case 0:
+			console.log("hi from case 0");
+			$("#firstDiv").addClass("hideIt");
+			$("#thirdDiv").addClass("hideIt");
+			$("#secondDiv").addClass("stickToTheWindow")
+			$("#secondDiv").removeClass("hideIt");
+			
+			currentDivIndex++;
+			break;
+		case 1:
+					console.log("hi from case 1");
+
+			$("#thirdDiv").addClass("stickToTheWindow")
+			$("#thirdDiv").removeClass("hideIt");
+				$("#firstDiv").addClass("hideIt");
+				$("#secondDiv").addClass("hideIt");
+				currentDivIndex++;
+				break;
+		case 2:
+					console.log("hi from case 2");
+
+			$("#firstDiv").addClass("stickToTheWindow")
+			$("#firstDiv").removeClass("hideIt");
+				$("#thirdDiv").addClass("hideIt");
+				$("#secondDiv").addClass("hideIt");
+				currentDivIndex = 0;
+				break;
+		default:
+		break;
+	}
+
+	// $("#firstDiv").addClass("hideIt");
+	// $("#secondDiv").addClass("stickToTheWindow");
 });
 
 
