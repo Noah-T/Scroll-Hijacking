@@ -1,25 +1,40 @@
-#yummyFood{
-	/*parent wrapper is always full screen*/
-	height: 100%;
+#projects {
+	height:100%;
 }
 
-.foodItem {
+#project-0{
+	background-color: red;
+	background-image: url("manning.jpg");
+	background-repeat: no-repeat;
+}
+#project-1{
+	background-color: blue;
+	background-image: url("brady1.jpg");
+	background-repeat: no-repeat;
+}
+#project-2{
+	background-color: yellow;
+}
+ 
+.slide {
+
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 0;
+	top:0;
+	left:0;
+	height: 0;							
 	width: 100%;
-
-	-webkit-transition: height 0.9s ease-in-out;
-
+ 
+	/*// this would be vendor prefixed:*/
+	-webkit-transition: height 0.4s ease-in-out;
 }
-
-.foodItem:nth-child(1) {z-index: 10;}
-.foodItem:nth-child(2) {z-index: 9;}
-.foodItem:nth-child(3) {z-index: 8;}
-
-.active.foodItem {
-	/* active item will get height of 100% */
+ 
+/*// so that slides can transition from bottom-up*/
+.slide:nth-child(1) { z-index:10;  }
+.slide:nth-child(2) { z-index:9;  }
+.slide:nth-child(3) { z-index:8;  }
+ 
+.active.slide {
+	
 	height: 100%;
+
 }
