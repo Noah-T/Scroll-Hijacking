@@ -1,0 +1,38 @@
+var array = [1, 2, 3, 4, 5, 6];
+function reverseArray(array){
+	var newArray = [];
+
+	for(var i = array.length-1; i >= 0; i--){
+		newArray.push(array[i]);
+	}
+	console.log(array);
+	return(newArray);
+
+}
+
+function reverseArrayInPlace(array){
+	
+	for(var i = 0; i < array.length/2; i++){
+		
+		
+		
+		//first item into temp variable
+		var temp = array[i];
+		//write second item into position of first item
+		array[i] = array[array.length-1-i];
+		//write temp variable into position of last item
+		array[array.length-1-i] = temp;
+	}
+	console.log(array);
+	return array;
+}
+
+function arrayToList(array){
+
+	list = {};
+	var list = {value: array[array.length-1], rest: array[array.length-2]}; 
+
+
+
+	return list;
+}

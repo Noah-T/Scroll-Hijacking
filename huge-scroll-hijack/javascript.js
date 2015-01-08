@@ -43,9 +43,7 @@ function showSlide() {
  		$(slide).toggleClass("active", (i >= currentSlideIndex));
  		console.log(i);
  	})
-
-
- 	 	
+ 	
 }
  
  

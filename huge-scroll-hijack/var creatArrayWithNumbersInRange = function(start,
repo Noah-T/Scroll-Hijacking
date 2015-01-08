@@ -1,0 +1,48 @@
+var creatArrayWithNumbersInRange = function(start, end){
+	mySweetArray = [];
+	for(var i = start; i <= end; i++){
+		mySweetArray.push(i);
+	}
+	return mySweetArray;
+}
+
+
+creatArrayWithNumbersInRange(1, 9);
+
+
+
+//recursive version
+var runningTotal = 0;
+myAwesomeArray = [];
+function createArrayRecursively(start, end, incrementByValue){
+	console.log(start + " " + end);
+	
+
+	//if it's not not a number...(is a number) use it to increment, otherwise use 1
+	if(!isNaN(incrementByValue)){
+		incrementByValue = incrementByValue
+	} else {
+		incrementByValue = 1;
+	}
+
+	if(incrementByValue > 0){
+		if(start > end){
+			console.log(myAwesomeArray);
+			console.log("\n\n the total is: " + runningTotal);
+			return;
+		}
+		myAwesomeArray.push(start); 
+		runningTotal += start;
+		createArrayRecursively(start+incrementByValue, end, incrementByValue);
+	} else {
+		if(start < end){
+			console.log("we got here");
+			console.log(myAwesomeArray);
+			console.log("\n\n the total is: " + runningTotal);
+			return;
+		}
+		myAwesomeArray.push(start); 
+		runningTotal += start;
+		createArrayRecursively(start+incrementByValue, end, incrementByValue);
+	}
+}
